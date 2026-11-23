@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Ремонт телефонов, ноутбуков и компьютеров — сервисный центр</title>
+<meta name="description" content="Ремонт смартфонов, ноутбуков, компьютеров, планшетов и консолей. Диагностика, понятное объяснение причины поломки и ежедневная лента полезных роликов о технике.">
+<meta property="og:title" content="Ремонт телефонов, ноутбуков и компьютеров">
+<meta property="og:description" content="Диагностика и ремонт техники + каждый день полезные ролики и карточки: как не сломать, что делать, когда идти к мастеру.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0b0f17">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <a href="#/" class="brand"><img src="assets/logo.svg" alt="" width="36" height="36"><span id="brandName">Сервис</span></a>
+    <nav class="nav" id="nav">
+      <a href="#services">Услуги</a>
+      <a href="#prices">Цены</a>
+      <a href="#feed">Лента</a>
+      <a href="#faq">Вопросы</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <a class="btn small" href="#contacts" data-cta>Записаться</a>
+  </div>
+</header>
+
+<div id="page">
+<section class="hero">
+  <div class="wrap hero-in">
+    <div class="hero-txt">
+      <p class="eyebrow" id="heroCity">Сервисный центр</p>
+      <h1>Ремонт телефонов, ноутбуков и компьютеров — <span class="grad">без догадок</span></h1>
+      <p class="sub">Найдём причину поломки, объясним простыми словами и починим. А каждый день в ленте — короткие ролики и карточки о том, как продлить жизнь технике.</p>
+      <div class="hero-btns">
+        <a class="btn big" href="#contacts" data-cta>🔧 Записаться на диагностику</a>
+        <a class="btn ghost big" href="#feed">▶ Смотреть ленту</a>
+      </div>
+      <ul class="hero-points" id="heroPoints"></ul>
+    </div>
+    <div class="hero-media" id="heroMedia" aria-hidden="true"></div>
+  </div>
+</section>
+
+<section class="wrap block" id="symptom">
+  <div class="sec-head"><div><h2>Что случилось с техникой?</h2><p>Выберите симптом — покажем полезные ролики по теме и подскажем, что делать.</p></div></div>
+  <div class="chips" id="symChips"></div>
+  <div id="symResult"></div>
+</section>
+
+<section class="wrap block" id="services">
+  <div class="sec-head"><div><h2>Что ремонтируем</h2><p>Смартфоны, ноутбуки, компьютеры и другая техника.</p></div></div>
+  <div class="svc-grid" id="svcGrid"></div>
+</section>
+
+<section class="wrap block" id="how">
+  <div class="sec-head"><div><h2>Как мы работаем</h2></div></div>
+  <ol class="steps" id="steps"></ol>
+</section>
+
+<section class="wrap block" id="prices">
+  <div class="sec-head"><div><h2>Цены</h2><p id="priceNote">Точную стоимость мастер назовёт после диагностики.</p></div></div>
+  <div class="prices" id="priceList"></div>
+</section>
+
+<section class="wrap block" id="feed">
+  <div class="sec-head">
+    <div><h2>Полезная лента</h2><p>Каждый день — ролик и карточки: мифы, советы, разборы поломок.</p></div>
+    <a class="btn ghost" id="tgFeedBtn" href="#contacts" target="_blank" rel="noopener">✈️ Telegram-канал</a>
+  </div>
+  <div class="chips" id="rubChips"></div>
+  <div class="grid" id="feedGrid"><div class="loading">Загружаю ленту…</div></div>
+  <div class="more-row"><button class="ghost" id="moreBtn" hidden>Показать ещё</button></div>
+</section>
+
+<section class="wrap block" id="faq">
+  <div class="sec-head"><div><h2>Частые вопросы</h2></div></div>
+  <div class="faq" id="faqList"></div>
+</section>
+
+<section class="wrap block" id="contacts">
+  <div class="contact-card">
+    <div>
+      <h2>Записаться на диагностику</h2>
+      <p class="sub">Опишите проблему — мы подскажем, что делать, и договоримся о времени.</p>
+      <div class="contact-btns" id="contactBtns"></div>
+      <p class="todo" id="contactTodo" hidden></p>
+    </div>
+    <dl class="contact-list" id="contactList"></dl>
+  </div>
+</section>
+</div>
+
+<div id="detail" class="wrap detail-wrap" hidden></div>
+
+<footer class="foot wrap">
+  <p><b id="footBrand"></b> · ремонт телефонов, ноутбуков и компьютеров</p>
+  <p class="mut">Ролики и карточки в ленте создаются автоматически по проверенным фактам; изображения в роликах могут быть иллюстрациями, а не фото реального ремонта.</p>
+  <p class="mut" id="updated"></p>
+</footer>
+
+<div class="mobile-cta" id="mobileCta">
+  <a class="btn" href="#contacts" data-cta>🔧 Записаться</a>
+  <a class="btn ghost" id="mobileTg" href="#feed">▶ Лента</a>
+</div>
+<div id="toast" class="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>
